@@ -5,7 +5,17 @@ Created on Mon Jan 31 21:04:34 2022
 
 @author: Maria de los Angeles Gomez
 
-This program calculates the metrics to test the method proposed
+This program tests the method proposed for the lipid peak suppression, calculates
+the usefulness of the SCSA in the method by calculating the amplitude Ratio (AR) between 
+the Ground Truth and the output of the BiLSTM, in MRS spectra with different levels 
+of noise= 5,10,15,20,50 dB. Also calculates the signal Intensity Ratio (SIR) of 2 stes of 
+MRS spectra with different levels of noise (5, 10 and 15 dB) and different alpha values
+(2, 3 and 5).
+
+inputs:
+ppm_path is the path of the ppm file
+model is the optimized model obtained from the Bayesian Search trained with 5000 epchs 
+and batch_size of 300
 
 MRSC_path_test is the path of the file with the ground truth for the SCSA Test
 MRS_path_test is the path of the file with MRS without SCSA for the SCSA Test
@@ -16,6 +26,17 @@ SCSA_path_si_test is the path of the file with MRS with SCSA for the SI test
 
 MRSC_path_noise_test is the path of the file with the ground truth for the noise test
 SCSA_path_noise_test is the path of the file with MRS with SCSA for the noise test
+
+output:
+    
+AR and SIR with SCSA and SIR AR without SCSA 
+Meand and Std of the AR and SIR with and without SCSA with different levels of 
+noise= 5,10,15,20,50 dB.
+SIR Lac1 is the Signal Intensity Ratio of the proximal peak (Lac1) 
+SIR Lac2 is the Signal Intensity Ratio of the distal peak (Lac2)
+Mean and Std of the SIR of lac1 and lac2, for the test with different levels 
+of noise (5, 10 and 15 dB) and different alpha values (2, 3 and 5).
+
 """
 
 import numpy as np
