@@ -5,6 +5,8 @@ Created on Mon Jan 31 21:04:34 2022
 
 @author: Maria de los Angeles Gomez
 
+This program calculates the metrics to test the method proposed
+
 MRSC_path_test is the path of the file with the ground truth for the SCSA Test
 MRS_path_test is the path of the file with MRS without SCSA for the SCSA Test
 SCSA_path_test is the path of the file with MRS with SCSA for the SCSA Test
